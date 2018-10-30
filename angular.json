@@ -123,5 +123,13 @@
       }
     }
   },
-  "defaultProject": "ngrx-router-error"
+  "defaultProject": "ngrx-router-error",
+  "schematics": {
+    "@ngrx/schematics:component": {
+      "prefix": "app"
+    }
+  },
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

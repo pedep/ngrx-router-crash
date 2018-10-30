@@ -1,6 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <script>
+    var warn_count = 0;
+    var oldfn = window.console.warn;
+    window.console.warn = function(a,b) {
+      warn_count++;
+      if (warn_count < 100) {
+        oldfn(a,b);
+      }
+    }
+  </script>
+
+
   <meta charset="utf-8">
   <title>NgrxRouterError</title>
   <base href="/">

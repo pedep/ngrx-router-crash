@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { FrontpageComponent } from './components/frontpage/frontpage.component';
+
+const routes: Routes = [
+  { path: '', pathMatch: 'full', component: FrontpageComponent },
+
+  { path: 'admin', loadChildren: './admin/admin.module#AdminModule' },
+  { path: 'user', loadChildren: './user/user.module#UserModule' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
